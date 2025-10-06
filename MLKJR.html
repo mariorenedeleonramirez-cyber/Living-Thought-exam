@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+   
+<header>
+   <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <nav>  
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Reportajes.html">Reportajes</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Entrevistas.html">Entrevistas</a></li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+                <div class="dropdown-content">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">English</a>
+                <div class="dropdown-content">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html">Reseñas</a></li>
+            <li><a href="Opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+</header>
+<section id="Martin">
+  <h2>Martin Luther King Jr. (1929-1968)</h2>
+  
+  <div class="content">
+    <p>
+ King was an American leader who fought against racial segregation through peaceful protest and the defense of civil rights. Inspired by Gandhi's philosophy of non-violence, his actions show how social movements can transform laws and consciences. 
+ Today, his legacy guides struggles for justice, equality, and human rights around the world.
+    </p>
+
+    <img src="IMG/Martin.jpeg" alt="Martin" title="Martin">
+  </div>
+</section>
+
+
+
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+<script>
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+
+// Crear botón de idioma si no existe
+let btnIdioma = document.getElementById('cambiarIdiomaBtn');
+if (!btnIdioma) {
+    btnIdioma = document.createElement('button');
+    btnIdioma.id = 'cambiarIdiomaBtn';
+    btnIdioma.textContent = '🇬🇧 Inglés';
+    document.querySelector('header').appendChild(btnIdioma);
+}
+
+// Seleccionar título y enlaces del menú
+const titulo = document.querySelector('header h1');
+const navLinks = document.querySelectorAll('nav > ul > li > a');
+const dropdowns = document.querySelectorAll('.dropdown-content');
+
+// ===== Modo oscuro =====
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+    btnModoOscuro.textContent = '☀️';
+} else {
+    btnModoOscuro.textContent = '🌙';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+
+// ===== Cambio de idioma =====
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+    idiomaEspañol = !idiomaEspañol;
+
+    if (idiomaEspañol) {
+        // Menú principal
+        navLinks[0].textContent = 'Inicio';
+        navLinks[1].textContent = 'Reportajes';
+        navLinks[2].textContent = 'Noticias';
+        navLinks[3].textContent = 'Entrevistas';
+        navLinks[4].textContent = 'Filosofía';
+        navLinks[5].textContent = 'English';
+        navLinks[6].textContent = 'Reseñas';
+        navLinks[7].textContent = 'Opiniones';
+        // Dropdown Filosofía
+        dropdowns[0].children[0].textContent = 'Karl Marx';
+        dropdowns[0].children[1].textContent = 'Sócrates';
+        dropdowns[0].children[2].textContent = 'Immanuel Kant';
+        dropdowns[0].children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English
+        dropdowns[1].children[0].textContent = 'Martin Luther King Jr';
+        dropdowns[1].children[1].textContent = 'Platón';
+        dropdowns[1].children[2].textContent = 'Mary Wollstonecraft';
+        dropdowns[1].children[3].textContent = 'Cesare Beccaria';
+        // Título y botón
+        titulo.textContent = 'Pensamiento Vivo';
+        btnIdioma.textContent = '🇬🇧 Inglés';
+    } else {
+        // Menú principal
+        navLinks[0].textContent = 'Home';
+        navLinks[1].textContent = 'Reports';
+        navLinks[2].textContent = 'News';
+        navLinks[3].textContent = 'Interviews';
+        navLinks[4].textContent = 'Philosophy';
+        navLinks[5].textContent = 'English';
+        navLinks[6].textContent = 'Reviews';
+        navLinks[7].textContent = 'Opinions';
+        // Dropdown Filosofía
+        dropdowns[0].children[0].textContent = 'Karl Marx';
+        dropdowns[0].children[1].textContent = 'Socrates';
+        dropdowns[0].children[2].textContent = 'Immanuel Kant';
+        dropdowns[0].children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English
+        dropdowns[1].children[0].textContent = 'Martin Luther King Jr';
+        dropdowns[1].children[1].textContent = 'Plato';
+        dropdowns[1].children[2].textContent = 'Mary Wollstonecraft';
+        dropdowns[1].children[3].textContent = 'Cesare Beccaria';
+        // Título y botón
+        titulo.textContent = 'Living Thought';
+        btnIdioma.textContent = '🇪🇸 Español';
+    }
+});
+</script>
+
+
+</body>
+</html>

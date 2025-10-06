@@ -1,0 +1,271 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+    <style>
+        .language-toggle {
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   
+<header>
+   <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button> 
+    <nav>  
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Reportajes.html">Reportajes</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Entrevistas.html">Entrevistas</a></li>
+            <li class="dropdown">  
+    <li class="dropdown" id="menu-filosofia">  
+    <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+    <div class="dropdown-content">
+        <a href="Karl.html">Karl Marx</a>
+        <a href="Sócrates.html">Sócrates</a>
+        <a href="Immanuel.html">Immanuel Kant</a>
+        <a href="Friedrich.html">Friedrich Nietzsche</a>
+            </div>
+    </li>
+
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">English</a>
+                <div class="dropdown-content">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html">Reseñas</a></li>
+            <li><a href="Opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sección de la reseña -->
+<section id="MRDL">
+    <h2 id="review-title">
+        Reseña del Libro: El Club de las 5 de la Mañana – Robin Sharma 
+        <span class="language-toggle" onclick="toggleText('review')">→</span>
+    </h2>
+
+    <!-- Texto en español -->
+    <div id="review-es">
+        <p>
+            Este libro escrito por Robin Sharma nos propone una filosofía práctica de vida basada en levantarse todos los días a las 5:00 a.m. 
+            para aprovechar las primeras horas con la fórmula 20/20/20: ejercicio, reflexión y aprendizaje. A través de una fábula motivacional, 
+            el autor muestra cómo este hábito impulsa la disciplina, la creatividad y el crecimiento personal para demostrar todo tu potencial. 
+        </p>
+        <p>
+            Aunque debo de admitir que el texto no es como los textos de varios filósofos, se conecta con la filosofía contemporánea, especialmente con corrientes como el estoicismo moderno y el "mindfulness", 
+            al invitar a cultivar la autodisciplina, el autocontrol y la búsqueda de sentido en la vida cotidiana. Así Sharma plantea que el éxito no depende solo del trabajo, 
+            sino de cuidar cuerpo, mente y espíritu en equilibrio espiritual e mental. 
+        </p>
+        <p>
+            <strong>En conclusión;</strong> Para mí este texto es inspirador y accesible, transmitiendo una filosofía práctica adaptada a la vida actual. 
+            Es ideal para quienes buscan transformar hábitos y vivir con propósito, aunque puede resultar repetitivo en algunos pasajes, pero es un precio que se podría pagar.
+        </p>
+
+          <center><a href="https://carlossigvardt.com.ar/wp-content/uploads/2025/03/El-Club-de-las-5-de-la-manana-Robin-Sharma.pdf"><img  width="300" height="480"src="IMG/RS.jfif" alt="exclusivo" title="exclusivo"></a></center>
+        <h4>-Mario de León-</h4>
+    </div>
+
+    <!-- Texto en inglés -->
+    <div id="review-en" class="hidden">
+        <p>
+            This book, written by Robin Sharma, presents a practical philosophy of life based on waking up every day at 5:00 a.m. 
+            to take advantage of the first hours with the 20/20/20 formula: exercise, reflection, and learning. Through a motivational fable, 
+            the author shows how this habit enhances discipline, creativity, and personal growth to unlock your full potential. 
+        </p>
+        <p>
+            Although I must admit that the text is not like the works of many classical philosophers, it connects with contemporary philosophy, 
+            especially with modern Stoicism and mindfulness, by inviting readers to cultivate self-discipline, self-control, and the search for meaning in everyday life. 
+            Sharma argues that success does not rely only on work, but also on maintaining balance between body, mind, and spirit. 
+        </p>
+        <p>
+            <strong>In conclusion:</strong> For me, this book is both inspiring and accessible, delivering a practical philosophy adapted to modern life. 
+            It is ideal for those who want to transform habits and live with purpose, although at times it may feel repetitive —a small price to pay. 
+        </p>
+          <center><a href="https://carlossigvardt.com.ar/wp-content/uploads/2025/03/El-Club-de-las-5-de-la-manana-Robin-Sharma.pdf"><img  width="300" height="480"src="IMG/RS.jfif" alt="exclusivo" title="exclusivo"></a></center>
+        <h4>-Mario de León-</h4>
+    </div>
+</section>
+
+<!-- Opinión personal -->
+<section id="JAQ">
+    <h2 id="opinion-title">
+        Reseña del Libro:  El mundo de Sofía - Jostein Gaarder 
+        <span class="language-toggle" onclick="toggleText('opinion')">→</span>
+    </h2>
+
+    <!-- Texto en español -->
+    <div id="opinion-es">
+<p>
+<em>El mundo de Sofía</em> es una novela que combina misterio, ficción y filosofía, escrita por Jostein Gaarder en 1991. La historia comienza cuando Sofía, una joven de 14 años, empieza a recibir cartas con preguntas profundas como <em>¿Quién eres?</em> o <em>¿De dónde viene el mundo?</em>. A partir de estas cartas, se embarca en un recorrido por la historia del pensamiento, conociendo a grandes filósofos como Sócrates, Platón, Aristóteles, Descartes, Kant, Marx, Freud, entre muchos otros.
+</p>
+<p>
+El libro logra unir la narrativa con la enseñanza filosófica de manera sencilla y entretenida, permitiendo que el lector aprenda mientras se sumerge en la historia. Además, invita a reflexionar sobre la vida, la existencia y el sentido del mundo, despertando la curiosidad y el pensamiento crítico.
+</p>
+<p>
+Por su estilo claro y ameno, es una excelente recomendación para quienes desean iniciarse en la filosofía, pues no solo transmite conocimiento, sino que también motiva a seguir cuestionando y explorando nuevas ideas.
+</p>
+
+        <center><a href="https://www.cs.buap.mx/~jitalo/libros/mundodesofia.pdf"><img  width="300" height="480"src="IMG/EmdS.jpg" alt="exclusivo" title="exclusivo"></a></center>
+        
+        <h4>-Javier Andrés Quiñónez-</h4>
+    </div>
+
+    <!-- Texto en inglés -->
+    <div id="opinion-en" class="hidden">
+<p>
+<em>Sophie's World</em> is a novel that blends mystery, fiction, and philosophy, written by Jostein Gaarder in 1991. The story begins when Sophie, a 14-year-old girl, starts receiving letters with deep questions such as <em>Who are you?</em> or <em>Where does the world come from?</em>. From these letters, she embarks on a journey through the history of thought, learning about great philosophers such as Socrates, Plato, Aristotle, Descartes, Kant, Marx, Freud, and many others.
+</p>
+<p>
+The book successfully combines narrative with philosophical teaching in a simple and entertaining way, allowing the reader to learn while following the story. Furthermore, it invites reflection on life, existence, and the meaning of the world, awakening curiosity and critical thinking.
+</p>
+<p>
+With its clear and engaging style, it is a great recommendation for those who wish to begin exploring philosophy, as it not only conveys knowledge but also encourages questioning and the exploration of new ideas.
+</p>
+
+         <center><a href="https://www.cs.buap.mx/~jitalo/libros/mundodesofia.pdf"><img  width="300" height="480"src="IMG/EmdS.jpg" alt="exclusivo" title="exclusivo"></a></center>
+        
+        <h4>-Javier Andrés Quiñónez-</h4>
+    </div>
+</section>
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+<script>
+/* ===== Modo Oscuro ===== */
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+    btnModoOscuro.textContent = '☀️';
+} else {
+    btnModoOscuro.textContent = '🌙';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+
+/* ===== Toggle de reseñas individual ===== */
+function toggleText(section) {
+    const es = document.getElementById(section + '-es');
+    const en = document.getElementById(section + '-en');
+    const title = document.getElementById(section + '-title');
+    const toggle = title.querySelector('.language-toggle');
+
+    es.classList.toggle('hidden');
+    en.classList.toggle('hidden');
+
+    if (section === 'review') {
+        title.childNodes[0].nodeValue = es.classList.contains('hidden') ? 
+            "Book Review: The 5 AM Club – Robin Sharma " : 
+            "Reseña del Libro: El Club de las 5 de la Mañana – Robin Sharma ";
+        toggle.textContent = es.classList.contains('hidden') ? "←" : "→";
+    } else if (section === 'opinion') {
+        title.childNodes[0].nodeValue = es.classList.contains('hidden') ? 
+            "Book Review: Sophie's World - Jostein Gaarder " : 
+            "Reseña del Libro:  El mundo de Sofía - Jostein Gaarder ";
+        toggle.textContent = es.classList.contains('hidden') ? "←" : "→";
+    }
+}
+
+/* ===== Cambio de idioma global ===== */
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+const navItems = document.querySelectorAll('nav ul li:not(.dropdown) a');
+
+// **Dropdown de Filosofía ahora con ID**
+const menuFilosofia = document.querySelector('#menu-filosofia .dropbtn');
+const dropdownFilosofia = document.querySelectorAll('#menu-filosofia .dropdown-content a');
+
+const titulo = document.querySelector('header h1');
+
+// Guardamos los textos originales
+const textos = {
+    es: {
+        h1: 'Pensamiento Vivo',
+        nav: ['Inicio', 'Reportajes', 'Noticias', 'Entrevistas', 'Reseñas', 'Opiniones'],
+        filosofia: ['Filosofía', 'Karl Marx', 'Sócrates', 'Immanuel Kant', 'Friedrich Nietzsche'],
+        reviewTitle: 'Reseña del Libro: El Club de las 5 de la Mañana – Robin Sharma',
+        opinionTitle: 'Reseña del Libro:  El mundo de Sofía - Jostein Gaarder',
+        btn: '🇬🇧 Inglés'
+    },
+    en: {
+        h1: 'Living Thought',
+        nav: ['Home', 'Reports', 'News', 'Interviews', 'Reviews', 'Opinions'],
+        filosofia: ['Philosophy', 'Karl Marx', 'Socrates', 'Immanuel Kant', 'Friedrich Nietzsche'],
+        reviewTitle: 'Book Review: The 5 AM Club – Robin Sharma',
+        opinionTitle: "Book Review: Sophie's World - Jostein Gaarder",
+        btn: '🇪🇸 Español'
+    }
+};
+
+// Estado inicial
+let idioma = 'es';
+
+btnIdioma.addEventListener('click', () => {
+    idioma = idioma === 'es' ? 'en' : 'es';
+
+    // Cambiar header
+    titulo.textContent = textos[idioma].h1;
+
+    // Cambiar nav principal
+    navItems.forEach((item, i) => item.textContent = textos[idioma].nav[i]);
+
+    // Cambiar dropdown Filosofía
+    menuFilosofia.textContent = textos[idioma].filosofia[0];
+    dropdownFilosofia.forEach((item, i) => item.textContent = textos[idioma].filosofia[i + 1]);
+
+    // Cambiar títulos de reseñas
+    document.getElementById('review-title').childNodes[0].nodeValue = textos[idioma].reviewTitle + " ";
+    document.getElementById('opinion-title').childNodes[0].nodeValue = textos[idioma].opinionTitle + " ";
+
+    // Cambiar botón
+    btnIdioma.textContent = textos[idioma].btn;
+
+    // Mostrar/ocultar textos de reseñas según idioma
+    if (idioma === 'en') {
+        document.getElementById('review-es').classList.add('hidden');
+        document.getElementById('review-en').classList.remove('hidden');
+        document.getElementById('opinion-es').classList.add('hidden');
+        document.getElementById('opinion-en').classList.remove('hidden');
+    } else {
+        document.getElementById('review-es').classList.remove('hidden');
+        document.getElementById('review-en').classList.add('hidden');
+        document.getElementById('opinion-es').classList.remove('hidden');
+        document.getElementById('opinion-en').classList.add('hidden');
+    }
+});
+
+</script>
+
+</body>
+</html>

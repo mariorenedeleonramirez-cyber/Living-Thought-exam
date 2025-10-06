@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+<header>
+    <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button>
+
+    <nav>  
+        <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="Reportajes.html" class="nav-item">Reportajes</a></li>
+            <li><a href="Noticias.html" class="nav-item">Noticias</a></li>
+            <li><a href="Entrevistas.html" class="nav-item">Entrevistas</a></li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn" id="menuFilosofia">Filosofía</a>
+                <div class="dropdown-content" id="dropdownFilosofia">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn" id="menuEnglish">English</a>
+                <div class="dropdown-content" id="dropdownEnglish">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html" class="nav-item">Reseñas</a></li>
+            <li><a href="Opiniones.html" class="nav-item">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="Beccaria">
+  <h2>Cesare Beccaria (1738-1794)</h2>
+  <div class="content">
+    <p>
+      Beccaria was an Italian philosopher and jurist who revolutionized the way of thinking about crime and criminal justice. He advocated for the prevention of crime through rational and fair means, rejecting torture and cruel punishments. His ideas influenced 
+      the modernization of judicial systems and today are the foundation of human rights and an ethical approach to law enforcement.
+    </p>
+    <img src="IMG/Beccaria.jpg" alt="Cesare" title="Cesare">
+  </div>
+</section>
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+
+<script>
+// ===== Modo oscuro =====
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+}
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+btnModoOscuro.textContent = document.body.classList.contains('modo-oscuro') ? '☀️' : '🌙';
+
+// ===== Cambio de idioma =====
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+const navItems = document.querySelectorAll('.nav-item');
+const menuFilosofia = document.getElementById('menuFilosofia');
+const dropdownFilosofia = document.getElementById('dropdownFilosofia');
+const menuEnglish = document.getElementById('menuEnglish');
+const dropdownEnglish = document.getElementById('dropdownEnglish');
+const titulo = document.querySelector('header h1');
+
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+    if (idiomaEspañol) {
+        // Menú principal en inglés
+        navItems[0].textContent = 'Home';
+        navItems[1].textContent = 'Reports';
+        navItems[2].textContent = 'News';
+        navItems[3].textContent = 'Interviews';
+        navItems[4].textContent = 'Reviews';
+        navItems[5].textContent = 'Opinions';
+        // Dropdown Filosofía
+        menuFilosofia.textContent = 'Philosophy';
+        dropdownFilosofia.children[0].textContent = 'Karl Marx';
+        dropdownFilosofia.children[1].textContent = 'Socrates';
+        dropdownFilosofia.children[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia.children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English (ya está en inglés)
+        menuEnglish.textContent = 'English';
+        // Título
+        titulo.textContent = 'Living Thought';
+        // Botón
+        btnIdioma.textContent = '🇪🇸 Español';
+        idiomaEspañol = false;
+    } else {
+        // Menú principal en español
+        navItems[0].textContent = 'Inicio';
+        navItems[1].textContent = 'Reportajes';
+        navItems[2].textContent = 'Noticias';
+        navItems[3].textContent = 'Entrevistas';
+        navItems[4].textContent = 'Reseñas';
+        navItems[5].textContent = 'Opiniones';
+        // Dropdown Filosofía
+        menuFilosofia.textContent = 'Filosofía';
+        dropdownFilosofia.children[0].textContent = 'Karl Marx';
+        dropdownFilosofia.children[1].textContent = 'Sócrates';
+        dropdownFilosofia.children[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia.children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English
+        menuEnglish.textContent = 'English';
+        // Título
+        titulo.textContent = 'Pensamiento Vivo';
+        // Botón
+        btnIdioma.textContent = '🇬🇧 Inglés';
+        idiomaEspañol = true;
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,753 @@
+  /* ==== Estilos globales ==== */
+
+.logo-circular {
+    width: 200px;  
+    height: 200px;
+    object-fit: cover;  
+    border-radius: 50%; 
+    display: block;
+    margin: 0 auto;  
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==== Encabezado ==== */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* ==== Menú de navegación ==== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #34495e;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background: #1abc9c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==== Sección principal ==== */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+section h4 {
+    text-align: right;
+    font-style: italic;
+    color: #555;
+}
+
+/* ==== Imagen dentro de sección ==== */
+section img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==== Pie de página ==== */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* ==== Contenido + Imagen ==== */
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.content img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content-left {
+    flex-direction: row-reverse;
+}
+
+.content p {
+    flex: 1;  
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ==== Autor ==== */
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.autor img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.autor-texto {
+    text-align: right;
+    flex: 1;
+}
+
+.autor-texto h4 {
+    margin: 0 0 5px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.autor-texto p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ==== Botones de idioma ==== */
+.lang-toggle, .language-toggle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid #fff;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.lang-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    margin-left: 15px;
+}
+
+.lang-toggle:hover {
+    background: linear-gradient(135deg, #005fa3, #0096c7);
+    transform: rotate(360deg) scale(1.1);
+}
+
+.language-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-left: 10px;
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+}
+
+.language-toggle:hover {
+    background: linear-gradient(135deg, #005fa3, #0096c7);
+    transform: scale(1.15);
+}
+
+/* ==== Comentarios ==== */
+.comentario {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.comentario img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.comentario .contenido {
+    flex: 1;
+    text-align: left;
+}
+
+.comentario .contenido h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.comentario .contenido p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ==== Botón de modo oscuro ==== */
+#modoOscuroBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.modo-oscuro #modoOscuroBtn {
+    background-color: #eee;
+    color: #000;
+}
+
+/* ==== Modo Oscuro ==== */
+body.modo-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro section h2 {
+    color: #f1f1f1;
+}
+
+body.modo-oscuro section p,
+body.modo-oscuro section h4 {
+    color: #ccc;
+}
+
+body.modo-oscuro nav a {
+    color: #e0e0e0;
+    background-color: gray;
+}
+
+body.modo-oscuro nav a:hover{
+    background-color: #000;
+
+}
+
+.comentario .contenido h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 10px 0;
+    text-align: center;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+
+body.modo-oscuro .comentario .contenido h5 {
+    color: #333;
+}
+
+body.modo-oscuro footer {
+    background: #eee;
+    color: #000;
+}
+body.modo-oscuro footer p {
+    color: #000;
+    text-align: center;
+}
+
+/* ==== Autores en modo oscuro ==== */
+body.modo-oscuro .autor {
+    background-color: #1e1e1e;           /* Fondo oscuro */
+    border: 1px solid #444;              /* Borde sutil */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* Sombra más profunda */
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+body.modo-oscuro .autor:hover {
+    background-color: #2a2a2a;           /* Hover ligeramente más claro */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+}
+
+body.modo-oscuro .autor img {
+    border: 2px solid #666;              /* Borde en fotos para destacarlas */
+    transition: border-color 0.3s, transform 0.3s; /* Mantiene el efecto hover del HTML */
+}
+
+body.modo-oscuro .autor img:hover {
+    transform: scale(1.05);              /* Mantiene la animación de agrandamiento */
+}
+
+body.modo-oscuro .autor .autor-texto h4 {
+    color: #e0e0e0;                      /* Nombre del autor */
+    transition: color 0.3s;
+}
+
+body.modo-oscuro .autor .autor-texto p {
+    color: #ccc;                          /* Texto de la opinión */
+    transition: color 0.3s;
+}
+
+body.modo-oscuro .autor .lang-toggle {
+    color: #00bfff;                       /* Botón de idioma visible en modo oscuro */
+    transition: color 0.3s, transform 0.3s; /* Mantiene animación del HTML */
+}
+
+/* Transición global para suavizar cambios */
+.autor, 
+.autor .autor-texto h4, 
+.autor .autor-texto p, 
+.autor .lang-toggle {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+/* ==== Botón Cambiar Idioma ==== */
+#cambiarIdiomaBtn {
+    position: absolute;
+    top: 20px;
+    right: 90px; /* Alineado con el botón de modo oscuro */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+#cambiarIdiomaBtn:hover {
+    background: linear-gradient(135deg, #005fa3, #0096c7);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Modo oscuro */
+body.modo-oscuro #cambiarIdiomaBtn {
+    background: linear-gradient(135deg, #005fa3, #0096c7);
+    color: #fff;
+}
+
+body.modo-oscuro #cambiarIdiomaBtn:hover {
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    transform: scale(1.1);
+}
+
+/* ==== Botón Cambiar Idioma ==== */
+#cambiarIdiomaBtn {
+    position: absolute;
+    top: 20px;
+    right: 90px; /* Alineado con el botón de modo oscuro */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+#cambiarIdiomaBtn:hover {
+    background: linear-gradient(135deg, #005fa3, #0096c7);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ==== Adaptación a modo oscuro ==== */
+body.modo-oscuro #cambiarIdiomaBtn {
+    background: linear-gradient(135deg, #333, #666);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+}
+
+body.modo-oscuro #cambiarIdiomaBtn:hover {
+    background: linear-gradient(135deg, #0077cc, #00b4d8);
+    box-shadow: 0 6px 12px rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
+
+/* ==== Comentarios / Entrevistas centradas ==== */
+.comentario {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* centrado horizontalmente */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra contenido e imagen */
+    max-width: 600px; /* ancho máximo */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Imagen dentro de la entrevista */
+.comentario img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Botón de cambio de idioma individual */
+.toggleIdiomaBtn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.toggleIdiomaBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Contenido en español e inglés */
+.contenido-es, .contenido-en {
+    width: 100%;
+    margin-top: 10px; /* separa del botón */
+    text-align: justify;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==== Modo oscuro ==== */
+body.modo-oscuro .comentario {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.modo-oscuro .toggleIdiomaBtn {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+body.modo-oscuro .toggleIdiomaBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Transiciones suaves para todo el comentario */
+.comentario,
+.comentario img,
+.comentario .contenido-es,
+.comentario .contenido-en,
+.toggleIdiomaBtn {
+    transition: all 0.3s ease;
+}
+
+/* Contenedor de carrusel */
+.carousel {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+/* Cada entrevista */
+.comentario {
+  display: none; /* solo se muestra la activa */
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Imagen centrada */
+.comentario img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  
+}
+
+/* Botón de idioma abajo */
+.toggleIdiomaBtn {
+  margin-top: 20px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.toggleIdiomaBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.arrow-left { left: 10px; }
+.arrow-right { right: 10px; }
+
+/* Modo oscuro */
+body.modo-oscuro .comentario {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.modo-oscuro .toggleIdiomaBtn {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+body.modo-oscuro .toggleIdiomaBtn:hover {
+  background-color: #0056b3;
+}
+
+/* ==== Comentarios estilo tarjeta horizontal ==== */
+.comentario {
+    display: none; /* se muestra solo el activo con JS */
+    flex-direction: row; /* horizontal */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+.modo-oscuro .comentario {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.comentario img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* Contenido a la derecha de la imagen */
+.comentario > div {
+    flex: 1; /* ocupa el resto del espacio */
+}
+
+.comentario h4 {
+    margin: 0 0 5px;
+    color: #007BFF;
+}
+
+.comentario h5 {
+    margin: 0 0 12px;
+    font-weight: 500;
+}
+
+.comentario p {
+    margin: 6px 0;
+    text-align: justify;
+}
+
+/* Botón de idioma en la parte inferior derecha de la tarjeta */
+.comentario .toggleIdiomaBtn {
+    margin-top: 15px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    align-self: flex-end;
+}
+
+/* Carrusel mantiene flechas */
+.arrow {
+    font-size: 32px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Responsive: tarjetas verticales en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .comentario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comentario img {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 15px;
+    }
+
+    .comentario > div {
+        width: 100%;
+    }
+
+    .arrow-left { left: 2px; }
+    .arrow-right { right: 2px; }
+}
+
+/* ==== Imágenes de entrevistados centradas y circulares ==== */
+.comentario img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;       /* puedes ajustar el tamaño */
+  height: 200px;      /* mismo valor que width para mantener el círculo */
+  object-fit: cover;  /* recorta la imagen sin deformarla */
+  border-radius: 50%; /* esto las hace circulares */
+}

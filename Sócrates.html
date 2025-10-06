@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+<header>
+    <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button> 
+
+    <nav>  
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Reportajes.html">Reportajes</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Entrevistas.html">Entrevistas</a></li>
+
+            <!-- Dropdown Filosofía con ID -->
+            <li class="dropdown" id="menu-filosofia">  
+                <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+                <div class="dropdown-content">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+
+            <!-- Dropdown English -->
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">English</a>
+                <div class="dropdown-content">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+
+            <li><a href="Reseñas.html">Reseñas</a></li>
+            <li><a href="Opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="Sócrates">
+    <h2>Sócrates (470-399 a.C.)</h2>
+    <div class="content">
+        <p>
+            Fue un pensador griego considerado el padre de la filosofía moral. Su método consistía en el diálogo y la pregunta constante, conocido como mayéutica, con el cual buscaba que las personas reflexionaran y llegaran por sí mismas al conocimiento. Su enseñanza principal fue que “una vida sin examen no merece ser vivida”. En la actualidad, sus ideas tienen gran relevancia porque promueven el pensamiento crítico, 
+            la autoconciencia y la capacidad de cuestionar lo establecido, algo esencial en la educación, 
+            la política y la vida cotidiana.
+        </p>
+        <img src="IMG/Socrates.webp" alt="Sócrates" title="Sócrates">
+    </div>
+</section>
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+
+<script>
+/* ===== Modo Oscuro ===== */
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+}
+btnModoOscuro.textContent = document.body.classList.contains('modo-oscuro') ? '☀️' : '🌙';
+
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+
+/* ===== Cambio de idioma global ===== */
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+const navItems = document.querySelectorAll('nav ul li:not(.dropdown) a');
+const menuFilosofia = document.querySelector('#menu-filosofia .dropbtn');
+const dropdownFilosofia = document.querySelectorAll('#menu-filosofia .dropdown-content a');
+const titulo = document.querySelector('header h1');
+
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+    if (idiomaEspañol) {
+        // Menú principal
+        navItems[0].textContent = 'Home';
+        navItems[1].textContent = 'Reports';
+        navItems[2].textContent = 'News';
+        navItems[3].textContent = 'Interviews';
+        navItems[4].textContent = 'Reviews';
+        navItems[5].textContent = 'Opinions';
+
+        // Menú Filosofía
+        menuFilosofia.textContent = 'Philosophy';
+        dropdownFilosofia[0].textContent = 'Karl Marx';
+        dropdownFilosofia[1].textContent = 'Socrates';
+        dropdownFilosofia[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia[3].textContent = 'Friedrich Nietzsche';
+
+        // Título
+        titulo.textContent = 'Living Thought';
+
+        // Botón
+        btnIdioma.textContent = '🇪🇸 Español';
+        idiomaEspañol = false;
+    } else {
+        // Menú principal
+        navItems[0].textContent = 'Inicio';
+        navItems[1].textContent = 'Reportajes';
+        navItems[2].textContent = 'Noticias';
+        navItems[3].textContent = 'Entrevistas';
+        navItems[4].textContent = 'Reseñas';
+        navItems[5].textContent = 'Opiniones';
+
+        // Menú Filosofía
+        menuFilosofia.textContent = 'Filosofía';
+        dropdownFilosofia[0].textContent = 'Karl Marx';
+        dropdownFilosofia[1].textContent = 'Sócrates';
+        dropdownFilosofia[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia[3].textContent = 'Friedrich Nietzsche';
+
+        // Título
+        titulo.textContent = 'Pensamiento Vivo';
+
+        // Botón
+        btnIdioma.textContent = '🇬🇧 Inglés';
+        idiomaEspañol = true;
+    }
+});
+</script>
+</body>
+</html>

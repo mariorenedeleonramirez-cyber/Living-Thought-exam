@@ -1,0 +1,235 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+    <style>
+        .autor {
+            display: flex;
+            align-items: flex-start;
+            margin: 30px auto;
+            max-width: 800px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .autor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .autor img:hover {
+            transform: scale(1.05);
+        }
+        .autor-texto {
+            flex: 1;
+        }
+        .autor-texto p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .lang-toggle {
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: blue;
+            text-decoration: underline;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button> 
+    <nav>  
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Reportajes.html">Reportajes</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Entrevistas.html">Entrevistas</a></li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+                <div class="dropdown-content">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">English</a>
+                <div class="dropdown-content">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html">Reseñas</a></li>
+            <li><a href="Opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sección Mario de León -->
+<section id="MRDL">
+  <div class="autor">
+    <img src="IMG/MRDL.jpg" alt="Mario" title="Mario">
+    <div class="autor-texto">
+      <h4>-Mario de León-</h4>
+      <p class="es">
+        La filosofía sigue siendo fundamental porque nos permite pensar críticamente y no aceptar las cosas tal como nos las imponen. Nos ayuda a cuestionar la política, las leyes y las injusticias sociales que se llegan a presentar.
+      </p>
+      <p class="es">
+        Relacionar esto con la actualidad es necesario; vivimos en un mundo con problemas de corrupción, desigualdad y violencia, y la filosofía nos da herramientas para reflexionar y proponer cambios favorables para resolverlos.
+      </p>
+      <p class="es">
+        Además, la filosofía nos enseña a pensar de manera independiente, analizar diferentes perspectivas y tomar decisiones más conscientes, formando ciudadanos reflexivos y capaces de transformar la sociedad.
+      </p>
+      <p class="en" style="display:none;">
+        Philosophy remains fundamental because it allows us to think critically and not accept things as they are imposed on us. It helps us question politics, laws, and social injustices that may arise.
+      </p>
+      <p class="en" style="display:none;">
+        Relating this to the present is necessary; we live in a world with problems of corruption, inequality, and violence, and philosophy gives us the tools to reflect and propose favorable changes to address them.
+      </p>
+      <p class="en" style="display:none;">
+        Furthermore, philosophy teaches us to think independently, analyze different perspectives, and make more conscious decisions, shaping reflective citizens capable of transforming society.
+      </p>
+      <span class="lang-toggle" onclick="toggleLang(this)">⇆ </span>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Javier Andrés Quiñónez -->
+<section id="JAQ">
+  <div class="autor">
+    <img src="IMG/JAQ.jpeg" alt="Javier" title="Haz clic para reproducir/pausar" onclick="toggleAudio()">
+    <div class="autor-texto">
+      <h4>-Javier Andrés Quiñónez-</h4>
+      <p class="es">
+        Mi opinión es que la filosofía es una herramienta fundamental para profundizar en el conocimiento del mundo y de uno mismo. Nos invita a cuestionar las ideas que damos por sentadas y a explorar otras perspectivas. Fomentarla desde temprana edad es muy valioso, ya que ayuda a los jóvenes a desarrollar pensamiento crítico y a analizar distintos aspectos de la vida cotidiana. La filosofía enseña a pensar de manera independiente, valorar diferentes ideas y tomar decisiones más conscientes, formando personas reflexivas y capaces de enfrentar los retos del mundo actual.
+      </p>
+      <p class="en" style="display:none;">
+        My opinion is that philosophy is a fundamental tool to deepen our understanding of the world and ourselves. It invites us to question the ideas we take for granted and explore other perspectives. Encouraging it from an early age is very valuable, as it helps young people develop critical thinking and analyze different aspects of daily life. Philosophy teaches us to think independently, value different ideas, and make more conscious decisions, shaping reflective individuals capable of facing the challenges of the modern world.
+      </p>
+      <span class="lang-toggle" onclick="toggleLang(this)">⇆ </span>
+    </div>
+    <audio id="audioJAQ">
+      <source src="ojitos mentirosos (31kbpsk)_1758319328430.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</section>
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+<script>
+// ===== Modo oscuro =====
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+  document.body.classList.add('modo-oscuro');
+  btnModoOscuro.textContent = '☀️';
+} else {
+  btnModoOscuro.textContent = '🌙';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+  document.body.classList.toggle('modo-oscuro');
+  if (document.body.classList.contains('modo-oscuro')) {
+    localStorage.setItem('modoOscuro', 'activado');
+    btnModoOscuro.textContent = '☀️';
+  } else {
+    localStorage.setItem('modoOscuro', 'desactivado');
+    btnModoOscuro.textContent = '🌙';
+  }
+});
+
+// ===== Diccionario de traducción del menú =====
+const traduccionesMenu = {
+  "Inicio": "Home",
+  "Reportajes": "Reports",
+  "Noticias": "News",
+  "Entrevistas": "Interviews",
+  "Filosofía": "Philosophy",
+  "English": "English",
+  "Reseñas": "Reviews",
+  "Opiniones": "Opinions"
+};
+
+const traduccionesMenuInverso = Object.fromEntries(
+  Object.entries(traduccionesMenu).map(([es, en]) => [en, es])
+);
+
+// ===== Cambio global de idioma =====
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+  const titulo = document.querySelector('header h1');
+  titulo.textContent = idiomaEspañol ? 'Living Thought' : 'Pensamiento Vivo';
+
+  // Cambiar idioma del menú principal
+  const enlacesMenu = document.querySelectorAll('nav a, .dropbtn');
+  enlacesMenu.forEach(a => {
+    const texto = a.textContent.trim();
+    if (idiomaEspañol && traduccionesMenu[texto]) {
+      a.textContent = traduccionesMenu[texto];
+    } else if (!idiomaEspañol && traduccionesMenuInverso[texto]) {
+      a.textContent = traduccionesMenuInverso[texto];
+    }
+  });
+
+  // Cambiar idioma de los autores
+  const autores = document.querySelectorAll('.autor');
+  autores.forEach(autor => {
+    const es = autor.querySelectorAll('.es');
+    const en = autor.querySelectorAll('.en');
+    es.forEach(p => p.style.display = idiomaEspañol ? 'none' : 'block');
+    en.forEach(p => p.style.display = idiomaEspañol ? 'block' : 'none');
+  });
+
+  btnIdioma.textContent = idiomaEspañol ? '🇪🇸 Español' : '🇬🇧 Inglés';
+  idiomaEspañol = !idiomaEspañol;
+});
+
+// ===== Cambio individual por autor =====
+function toggleLang(element) {
+  const autorTexto = element.parentElement;
+  const esParrafos = autorTexto.querySelectorAll('.es');
+  const enParrafos = autorTexto.querySelectorAll('.en');
+  const mostrandoIngles = enParrafos[0].style.display === 'block';
+
+  esParrafos.forEach(p => p.style.display = mostrandoIngles ? 'block' : 'none');
+  enParrafos.forEach(p => p.style.display = mostrandoIngles ? 'none' : 'block');
+}
+
+// ===== Audio de autores =====
+const audios = document.querySelectorAll('.autor audio');
+audios.forEach(audio => {
+  const img = audio.parentElement.querySelector('img');
+  img.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+});
+</script>
+
+</body>
+
+</html>

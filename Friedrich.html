@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+    <style>
+        /* Botones */
+        header button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            transition: background-color 0.3s;
+        }
+        header button:hover {
+            background-color: #bbb;
+        }
+
+        /* Modo oscuro */
+        body.modo-oscuro {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.modo-oscuro header {
+            background-color: #1f1f1f;
+        }
+        body.modo-oscuro nav ul li a {
+            color: #f0f0f0;
+        }
+        body.modo-oscuro .dropdown-content {
+            background-color: #2b2b2b;
+        }
+        body.modo-oscuro footer {
+            background-color: #1f1f1f;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button>
+
+    <nav>  
+        <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="Reportajes.html" class="nav-item">Reportajes</a></li>
+            <li><a href="Noticias.html" class="nav-item">Noticias</a></li>
+            <li><a href="Entrevistas.html" class="nav-item">Entrevistas</a></li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn" id="menuFilosofia">Filosofía</a>
+                <div class="dropdown-content" id="dropdownFilosofia">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn" id="menuEnglish">English</a>
+                <div class="dropdown-content" id="dropdownEnglish">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html" class="nav-item">Reseñas</a></li>
+            <li><a href="Opiniones.html" class="nav-item">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sección Friedrich Nietzsche -->
+<section id="Friedrich">
+    <h2>Friedrich Nietzsche (1844-1900)</h2>
+    <div class="content">
+        <p>
+            Fue un filósofo alemán que cuestionó la moral tradicional, la religión y las estructuras sociales de su tiempo. 
+            Propuso conceptos como el “superhombre” y la “voluntad de poder”, invitando a los seres humanos a crear 
+            sus propios valores y a vivir de manera auténtica. En la actualidad, sus ideas inspiran debates sobre libertad 
+            individual, crítica a las instituciones y la importancia de la creatividad y la autoafirmación personal en 
+            una sociedad cambiante.
+        </p>
+        <img src="IMG/Friedrich.webp" alt="Friedrich" title="Friedrich">
+    </div>
+</section>
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+
+<script>
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+const navItems = document.querySelectorAll('.nav-item');
+const menuFilosofia = document.getElementById('menuFilosofia');
+const dropdownFilosofia = document.getElementById('dropdownFilosofia');
+const titulo = document.querySelector('header h1');
+
+// ===== Modo oscuro =====
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+    btnModoOscuro.textContent = '☀️';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+btnModoOscuro.textContent = document.body.classList.contains('modo-oscuro') ? '☀️' : '🌙';
+
+// ===== Cambio de idioma =====
+let idiomaEspañol = true;
+btnIdioma.addEventListener('click', () => {
+    if (idiomaEspañol) {
+        // Menú principal a inglés
+        navItems[0].textContent = 'Home';
+        navItems[1].textContent = 'Reports';
+        navItems[2].textContent = 'News';
+        navItems[3].textContent = 'Interviews';
+        navItems[4].textContent = 'Reviews';
+        navItems[5].textContent = 'Opinions';
+        // Menú Filosofía
+        menuFilosofia.textContent = 'Philosophy';
+        dropdownFilosofia.children[0].textContent = 'Karl Marx';
+        dropdownFilosofia.children[1].textContent = 'Socrates';
+        dropdownFilosofia.children[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia.children[3].textContent = 'Friedrich Nietzsche';
+        // Título
+        titulo.textContent = 'Living Thought';
+        btnIdioma.textContent = '🇪🇸 Español';
+        idiomaEspañol = false;
+    } else {
+        // Menú principal a español
+        navItems[0].textContent = 'Inicio';
+        navItems[1].textContent = 'Reportajes';
+        navItems[2].textContent = 'Noticias';
+        navItems[3].textContent = 'Entrevistas';
+        navItems[4].textContent = 'Reseñas';
+        navItems[5].textContent = 'Opiniones';
+        // Menú Filosofía
+        menuFilosofia.textContent = 'Filosofía';
+        dropdownFilosofia.children[0].textContent = 'Karl Marx';
+        dropdownFilosofia.children[1].textContent = 'Sócrates';
+        dropdownFilosofia.children[2].textContent = 'Immanuel Kant';
+        dropdownFilosofia.children[3].textContent = 'Friedrich Nietzsche';
+        // Título
+        titulo.textContent = 'Pensamiento Vivo';
+        btnIdioma.textContent = '🇬🇧 Inglés';
+        idiomaEspañol = true;
+    }
+});
+</script>
+
+</body>
+</html>

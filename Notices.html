@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Living Thought</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon" />
+</head>
+
+<body>
+
+<header>
+  <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati" />
+  <h1>Living Thought</h1>
+  <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Reportajes.html">Reportajes</a></li>
+      <li><a href="Noticias.html">Noticias</a></li>
+      <li><a href="Entrevistas.html">Entrevistas</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+        <div class="dropdown-content">
+          <a href="Karl.html">Karl Marx</a>
+          <a href="Sócrates.html">Sócrates</a>
+          <a href="Immanuel.html">Immanuel Kant</a>
+          <a href="Friedrich.html">Friedrich Nietzsche</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">English</a>
+        <div class="dropdown-content">
+          <a href="MLKJR.html">Martin Luther King Jr</a>
+          <a href="Platón.html">Platón</a>
+          <a href="Mary.html">Mary Wollstonecraft</a>
+          <a href="Cesare.html">Cesare Beccaria</a>
+        </div>
+      </li>
+      <li><a href="Reseñas.html">Reseñas</a></li>
+      <li><a href="Opiniones.html">Opiniones</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Botón para cambiar idioma -->
+<div class="lang-switch" style="text-align:right; margin:10px;">
+  <a href="Noticias.html" title="Cambiar a Español" style="text-decoration:none; font-weight:bold;">
+    🌐 Switch to Spanish
+  </a>
+</div>
+
+<section id="N1">
+
+  <!-- Primer bloque -->
+  <h2>International Congress of Philosophy and Technology</h2>
+  <div class="content">
+    <div class="text-content">
+      <p><strong>Place: </strong> Berlin, Germany</p>
+      <p><strong>Date: </strong> September 2025</p>
+      <p>
+        Philosophers, scientists, and ethics experts gathered to debate the future of artificial intelligence (AI).
+
+        In an international symposium held this week at the University of Berlin, leaders in philosophy, science, and ethics analyzed the social, political, and moral implications of the growing role of AI in everyday life.
+
+        The event brought together experts from various disciplines and countries, promoting interdisciplinary dialogue on the challenges and opportunities presented by this technology.
+        <br>
+        The importance of ethical education in the development of emerging technologies and the shared responsibility among governments, companies, and civil society to prevent potential abuses was also discussed.
+
+        <br>The urgency of integrating ethics from the early stages of AI system design and programming was highlighted.
+
+        <br>At the end, experts agreed on the need to continue promoting spaces for global dialogue and collaboration to ensure that AI contributes to social well-being without compromising fundamental human rights.
+      </p>
+    </div>
+ <a href="https://www.anpof.org/agenda/eventos/v-congreso-iberoamericano-de-filosofia-de-la-ciencia-y-la-tecnologia"><img src="IMG/AI.jfif" alt="IA" title="IA" /></a>
+  </div>
+
+  <!-- Segundo bloque -->
+  <h2>Discovery of Aristotle's Manuscripts</h2>
+  <div class="content content-left">
+    <div class="text-content">
+      <p><strong>Place: </strong> Thessaloniki, Greece</p>
+      <p><strong>Date: </strong> August 2025</p>
+      <p>
+        A team of archaeologists found unpublished fragments of texts attributed to Aristotle, related to practical ethics.
+
+        <br>During an excavation in the ancient city of Stagira, Aristotle's birthplace, several papyrus fragments were discovered bearing writings attributed to the philosopher.
+
+        <br>These documents address topics of practical ethics, a central area in his work but little explored in the preserved texts.
+
+        Philosophy and paleography experts highlight that the texts could contain previously unknown teachings on virtue, happiness (eudaimonia), and moral decision-making in everyday life. This discovery offers a unique opportunity to reassess Aristotelian ethics and its practical application.
+      </p>
+    </div>
+   <a href="https://www.labrujulaverde.com/2018/09/como-la-biblioteca-personal-de-aristoteles-llego-a-roma-casi-300-anos-despues-de-su-muerte"><img src="IMG/Manuscrito.jfif" alt="Manuscrito" title="Manuscrito"></a>
+  </div>
+
+  <!-- Tercer bloque -->
+  <h2>Philosophy in Schools</h2>
+  <div class="content">
+    <div class="text-content">
+      <p><strong>Place: </strong> Mexico City</p>
+      <p><strong>Date: </strong> July 2025</p>
+      <p>
+        The Ministry of Education announced that philosophy will be a mandatory subject starting in secondary school to promote critical thinking and civic ethics. The pilot project has been supported by academics from across Latin America.
+
+        <br>This measure seeks to strengthen students’ analytical and ethical skills, promoting a more reflective and participatory citizenship in the face of current challenges.
+
+        <br>Civil and educational organizations have welcomed the initiative, highlighting that teaching philosophy helps combat misinformation, fanaticism, and intolerance.
+
+        The program will include intensive teacher training and pedagogical materials adapted to the country's social and cultural context.
+      </p>
+    </div>
+    <a href="https://www.educacionfutura.org/la-ensenanza-de-la-filosofia-y-la-nueva-escuela-mexicana/"><img src="IMG/JoJo.jfif" alt="Filosofía Escolar" title="Filosofía Escolar" /></a>
+  </div>
+
+</section>
+
+<footer>
+  <p>Miembros/Members:<br />Mario De León y Andrés Quiñónez<br /> &copy;2025</p>
+</footer>
+<script>
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+
+// Crear botón de idioma si no existe
+let btnIdioma = document.getElementById('cambiarIdiomaBtn');
+if (!btnIdioma) {
+    btnIdioma = document.createElement('button');
+    btnIdioma.id = 'cambiarIdiomaBtn';
+    btnIdioma.textContent = '🇬🇧 Inglés';
+    document.querySelector('header').appendChild(btnIdioma);
+}
+
+// Seleccionar título y enlaces del menú
+const titulo = document.querySelector('header h1');
+const navLinks = document.querySelectorAll('nav > ul > li > a');
+const dropdowns = document.querySelectorAll('.dropdown-content');
+
+// ===== Modo oscuro =====
+if (localStorage.getItem('modoOscuro') === 'activado') {
+    document.body.classList.add('modo-oscuro');
+    btnModoOscuro.textContent = '☀️';
+} else {
+    btnModoOscuro.textContent = '🌙';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    if (document.body.classList.contains('modo-oscuro')) {
+        localStorage.setItem('modoOscuro', 'activado');
+        btnModoOscuro.textContent = '☀️';
+    } else {
+        localStorage.setItem('modoOscuro', 'desactivado');
+        btnModoOscuro.textContent = '🌙';
+    }
+});
+
+// ===== Cambio de idioma =====
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+    idiomaEspañol = !idiomaEspañol;
+
+    if (idiomaEspañol) {
+        // Menú principal
+        navLinks[0].textContent = 'Inicio';
+        navLinks[1].textContent = 'Reportajes';
+        navLinks[2].textContent = 'Noticias';
+        navLinks[3].textContent = 'Entrevistas';
+        navLinks[4].textContent = 'Filosofía';
+        navLinks[5].textContent = 'English';
+        navLinks[6].textContent = 'Reseñas';
+        navLinks[7].textContent = 'Opiniones';
+        // Dropdown Filosofía
+        dropdowns[0].children[0].textContent = 'Karl Marx';
+        dropdowns[0].children[1].textContent = 'Sócrates';
+        dropdowns[0].children[2].textContent = 'Immanuel Kant';
+        dropdowns[0].children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English
+        dropdowns[1].children[0].textContent = 'Martin Luther King Jr';
+        dropdowns[1].children[1].textContent = 'Platón';
+        dropdowns[1].children[2].textContent = 'Mary Wollstonecraft';
+        dropdowns[1].children[3].textContent = 'Cesare Beccaria';
+        // Título y botón
+        titulo.textContent = 'Pensamiento Vivo';
+        btnIdioma.textContent = '🇬🇧 Inglés';
+    } else {
+        // Menú principal
+        navLinks[0].textContent = 'Home';
+        navLinks[1].textContent = 'Reports';
+        navLinks[2].textContent = 'News';
+        navLinks[3].textContent = 'Interviews';
+        navLinks[4].textContent = 'Philosophy';
+        navLinks[5].textContent = 'English';
+        navLinks[6].textContent = 'Reviews';
+        navLinks[7].textContent = 'Opinions';
+        // Dropdown Filosofía
+        dropdowns[0].children[0].textContent = 'Karl Marx';
+        dropdowns[0].children[1].textContent = 'Socrates';
+        dropdowns[0].children[2].textContent = 'Immanuel Kant';
+        dropdowns[0].children[3].textContent = 'Friedrich Nietzsche';
+        // Dropdown English
+        dropdowns[1].children[0].textContent = 'Martin Luther King Jr';
+        dropdowns[1].children[1].textContent = 'Plato';
+        dropdowns[1].children[2].textContent = 'Mary Wollstonecraft';
+        dropdowns[1].children[3].textContent = 'Cesare Beccaria';
+        // Título y botón
+        titulo.textContent = 'Living Thought';
+        btnIdioma.textContent = '🇪🇸 Español';
+    }
+});
+</script>
+
+</body>
+</html>

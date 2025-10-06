@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Living Thought</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon" />
+  <style>
+    .hidden { display: none; }
+    .toggleIdiomaBtn {
+      margin-top: 10px;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+    }
+    .carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    .comentario {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: #f9f9f9;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background-color: rgba(0,0,0,0.3);
+      color: #fff;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+    }
+    .arrow-left { left: 10px; }
+    .arrow-right { right: 10px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo-circular" src="IMG/logo3.png" alt="Bugatti" title="Bugatti" />
+    <h1>Pensamiento Vivo</h1>
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Reportajes.html">Reportajes</a></li>
+        <li><a href="Noticias.html">Noticias</a></li>
+        <li><a href="Entrevistas.html">Entrevistas</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+          <div class="dropdown-content">
+            <a href="Karl.html">Karl Marx</a>
+            <a href="Sócrates.html">Sócrates</a>
+            <a href="Immanuel.html">Immanuel Kant</a>
+            <a href="Friedrich.html">Friedrich Nietzsche</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">English</a>
+          <div class="dropdown-content">
+            <a href="MLKJR.html">Martin Luther King Jr</a>
+            <a href="Platón.html">Platón</a>
+            <a href="Mary.html">Mary Wollstonecraft</a>
+            <a href="Cesare.html">Cesare Beccaria</a>
+          </div>
+        </li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+        <li><a href="Opiniones.html">Opiniones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="carousel">
+    <div class="arrow arrow-left">&#10094;</div>
+    <div class="arrow arrow-right">&#10095;</div>
+
+    <!-- ENTREVISTA 1: WILLIAMS VELÁSQUEZ -->
+    <div class="comentario">
+      <img src="IMG/WV.png" alt="Willy" />
+      <div class="contenido-es">
+        <h4>Williams Velásquez - Graduado</h4>
+        <h5>Entrevista sobre Martin Luther King JR:</h5>
+        <p><strong>1. ¿Qué significa realmente la igualdad si aún existen barreras invisibles que separan a las personas?</strong></p>
+        <p style="margin-left:20px;">R// La igualdad según mi perspectiva y vivencias es la base sobre los derechos pero no siempre se puede evidenciar claramente por cuestiones como cultura, raza e incluso género que son “barreras invisibles” que no permiten que la igualdad se evidencie y su significado sea claro.</p>
+
+        <p><strong>2. ¿Se puede lograr la justicia sin antes pasar por sacrificios personales y colectivos?</strong></p>
+        <p style="margin-left:20px;">R// La justicia consiste en hacer lo que es éticamente correcto y necesario, lo que significa que se deben aceptar todos los errores y ofensas cometidos; esto representa un sacrificio porque al aceptar el error y la ofensa, uno debe aceptar una consecuencia o efecto. Por lo tanto, NO, no se puede lograr sin ningún sacrificio.</p>
+
+        <p><strong>3. ¿Cuál es la diferencia entre soñar con un mundo mejor y trabajar para construirlo?</strong></p>
+        <p style="margin-left:20px;">R// En una situación hipotética donde no existen consecuencias ni dificultades, por eso 'soñar' es fácil; sin embargo, trabajar para construirlo no es fácil, pero trasciende lo 'hipotético' y puede convertirse en realidad.</p>
+
+        <p><strong>4. Si “la injusticia en cualquier parte es una amenaza a la justicia en todas partes”, ¿cómo debería responder un ser humano ético ante la opresión que ocurre lejos de su realidad inmediata?</strong></p>
+        <p style="margin-left:20px;">R// Respondería de manera que empiece por lo que se encuentre a mi alcance y capacidades, identificar de manera personal y en círculos sociales pequeños-cercanos actitudes que atenten hacia la justicia, empezando desde mi propio ser.</p>
+
+        <p><strong>5. ¿Puede la fe mover a las sociedades hacia el cambio, o es necesario que esté acompañada siempre por la acción política y social?</strong></p>
+        <p style="margin-left:20px;">R// Es la combinación de ambas, no se puede predecir el futuro con perfección, el papel de la fe entra ahí, en el motivar a continuar pese a que el camino no sea claro y se complementa con ambas acciones.</p>
+      </div>
+
+      <div class="contenido-en hidden">
+        <h4>Williams Velásquez - Graduate</h4>
+        <h5>Interview about Martin Luther King JR:</h5>
+        <p><strong>1. What does equality really mean if invisible barriers still separate people?</strong></p>
+        <p style="margin-left:20px;">A// Equality, from my perspective and experiences, is the foundation of rights but is not always clearly visible due to factors such as culture, race, and even gender, which are “invisible barriers” that prevent equality from being evident and its meaning clear.</p>
+
+        <p><strong>2. Can justice be achieved without going through personal and collective sacrifices?</strong></p>
+        <p style="margin-left:20px;">A// Justice is about doing what is ethically correct and necessary, which means accepting all mistakes and offenses committed; this represents a sacrifice because accepting the mistake and offense implies accepting a consequence. Therefore, NO, it cannot be achieved without any sacrifice.</p>
+
+        <p><strong>3. What is the difference between dreaming of a better world and working to build it?</strong></p>
+        <p style="margin-left:20px;">A// In a hypothetical situation with no consequences or difficulties, 'dreaming' is easy; however, working to build it is not easy, but it transcends the 'hypothetical' and can become real.</p>
+
+        <p><strong>4. If “injustice anywhere is a threat to justice everywhere,” how should an ethical human respond to oppression far from their immediate reality?</strong></p>
+        <p style="margin-left:20px;">A// I would respond starting with what is within my reach and capabilities, identifying personally and in small social circles actions that threaten justice, beginning with myself.</p>
+
+        <p><strong>5. Can faith move societies toward change, or must it always be accompanied by political and social action?</strong></p>
+        <p style="margin-left:20px;">A// It is a combination of both; the role of faith is to motivate continued action even if the path is unclear, and it is complemented by both types of action.</p>
+      </div>
+      <button class="toggleIdiomaBtn">🇬🇧 Inglés</button>
+    </div>
+
+    <!-- ENTREVISTA 2: HECTOR YANKARLO MORÁN -->
+    <div class="comentario">
+      <img src="IMG/ETO.jpg" alt="Eto" />
+      <div class="contenido-es">
+        <h4>Hector Yankarlo Morán - 10Mo Compu</h4>
+        <h5>Entrevista sobre Platón:</h5>
+        <p><strong>1. ¿Qué aportes de Platón consideras más importantes para la filosofía política?</strong></p>
+        <p style="margin-left:20px;">R// Platón propuso la idea de un Estado gobernado por filósofos-reyes, donde los más sabios garantizarían justicia y equilibrio. Este modelo es importante porque prioriza el conocimiento y la virtud sobre la ambición y el poder personal. Además, resalta la necesidad de que quienes dirigen comprendan profundamente la ética y la filosofía, asegurando que las leyes y decisiones políticas sean justas y beneficiosas para toda la sociedad.</p>
+
+        <p><strong>2. ¿Cómo crees que la educación influía en el pensamiento de Platón?</strong></p>
+        <p style="margin-left:20px;">R// Para Platón, la educación era fundamental porque sin ella no se podían formar ciudadanos responsables ni líderes justos. La educación no solo transmitía conocimientos, sino que también cultivaba la virtud y la razón. Esto aseguraba que los individuos pudieran tomar decisiones éticas y contribuir activamente al bienestar de la polis, evitando la corrupción y la ignorancia en los ámbitos políticos y sociales.</p>
+
+        <p><strong>3. ¿Qué enseñanza de Platón te parece más aplicable hoy?</strong></p>
+        <p style="margin-left:20px;">R// La enseñanza más aplicable hoy es la necesidad de líderes con valores y conocimiento, no solo con ambiciones de poder. Platón nos recuerda que un liderazgo sólido requiere sabiduría, ética y sentido de responsabilidad hacia los demás. Esto sigue siendo relevante, ya que muchas sociedades aún enfrentan problemas de corrupción, egoísmo y falta de preparación de sus gobernantes.</p>
+
+        <p><strong>4. ¿Qué opinas de la visión platónica sobre la justicia?</strong></p>
+        <p style="margin-left:20px;">R// Platón veía la justicia como el cumplimiento adecuado de cada persona de su rol en la sociedad, respetando el orden y la armonía. Esto implica que todos, desde los ciudadanos hasta los gobernantes, actúen según sus capacidades y responsabilidades. Hoy, esto nos inspira a buscar un equilibrio social donde cada quien contribuya de manera justa, evitando desigualdades y promoviendo el bien común.</p>
+
+        <p><strong>5. ¿Cómo relacionarías las ideas de Platón con la política actual?</strong></p>
+        <p style="margin-left:20px;">R// Aunque vivimos en democracias modernas, las ideas de Platón aún inspiran el debate sobre cómo elegir a nuestros gobernantes y cómo lograr un gobierno más sabio y justo. Su énfasis en la educación y la virtud de los líderes sigue siendo crucial para formar sociedades estables y equitativas, y nos invita a reflexionar sobre cómo los ciudadanos pueden participar de manera ética y responsable en la vida política.</p>
+      </div>
+
+      <div class="contenido-en hidden">
+        <h4>Hector Yankarlo Morán - 10th Grade Computer</h4>
+        <h5>Interview about Platon:</h5>
+        <p><strong>1. What contributions of Platon do you consider most important for political philosophy?</strong></p>
+        <p style="margin-left:20px;">A// Plato proposed the idea of a state governed by philosopher-kings, where the wisest would guarantee justice and balance. This model is important because it prioritizes knowledge and virtue over ambition and personal power. It also emphasizes the need for leaders to deeply understand ethics and philosophy, ensuring laws and political decisions are fair and beneficial for society as a whole.</p>
+
+        <p><strong>2. How do you think education influenced Platon’s thought?</strong></p>
+        <p style="margin-left:20px;">A// For Platon, education was fundamental because, without it, responsible citizens or just leaders could not be formed. Education not only transmitted knowledge but also cultivated virtue and reason. This ensured that individuals could make ethical decisions and actively contribute to the well-being of the polis, avoiding corruption and ignorance in political and social realms.</p>
+
+        <p><strong>3. Which teaching of Plato do you find most applicable today?</strong></p>
+        <p style="margin-left:20px;">A// The most applicable teaching today is the need for leaders with values and knowledge, not just power ambitions. Plato reminds us that solid leadership requires wisdom, ethics, and a sense of responsibility towards others. This remains relevant, as many societies still face corruption, selfishness, and unprepared leaders.</p>
+
+        <p><strong>4. What do you think of Plato’s view on justice?</strong></p>
+        <p style="margin-left:20px;">A// Plato saw justice as the proper fulfillment of each person’s role in society, respecting order and harmony. This implies that everyone, from citizens to leaders, acts according to their abilities and responsibilities. Today, this inspires us to seek social balance, where everyone contributes fairly, avoiding inequalities and promoting the common good.</p>
+
+        <p><strong>5. How would you relate Platon’s ideas to current politics?</strong></p>
+        <p style="margin-left:20px;">A// Even though we live in modern democracies, Plato’s ideas still inspire debate on how to choose our leaders and achieve wiser, fairer governance. His emphasis on education and virtue of leaders remains crucial for stable and equitable societies, encouraging citizens to participate ethically and responsibly in political life.</p>
+      </div>
+      <button class="toggleIdiomaBtn">🇬🇧 Inglés</button>
+    </div>
+   <!-- ENTREVISTA 1: ROBERTO CASTAÑEDA (SÓCRATES) -->
+    <div class="comentario">
+      <img src="IMG/Robert.jpg" alt="Roberto" />
+      <div class="contenido-es">
+        <h4>Roberto Castañeda - 10th CCLL</h4>
+        <h5>Entrevista sobre Sócrates:</h5>
+        <p><strong>1. ¿Cómo influyó el método socrático en el desarrollo del pensamiento crítico y la filosofía occidental?</strong></p>
+        <p style="margin-left:20px;">R// El método socrático fomentó el diálogo y la reflexión constante, enseñando a cuestionar las ideas y buscar la verdad mediante la razón. Este enfoque es la base del pensamiento crítico moderno.</p>
+
+        <p><strong>2. ¿Cuáles son las principales diferencias entre las enseñanzas de Sócrates y las de los sofistas de su época?</strong></p>
+        <p style="margin-left:20px;">R// Sócrates buscaba la verdad y la virtud como fines en sí mismos, mientras que los sofistas enseñaban a persuadir y argumentar por conveniencia, sin importar la verdad.</p>
+
+        <p><strong>3. ¿Qué papel jugó la acusación de corromper a la juventud en el juicio y condena de Sócrates?</strong></p>
+        <p style="margin-left:20px;">R// Fue el motivo principal de su condena. Se le acusó de influir negativamente en los jóvenes al cuestionar las creencias tradicionales, aunque en realidad promovía el pensamiento libre y ético.</p>
+
+        <p><strong>4. ¿Cómo interpretas la famosa frase de Sócrates "Solo sé que no sé nada" en el contexto de su filosofía?</strong></p>
+        <p style="margin-left:20px;">R// Refleja la humildad intelectual: reconocer la ignorancia es el primer paso hacia el conocimiento. Para Sócrates, la sabiduría comienza cuando se acepta que no se sabe todo.</p>
+
+        <p><strong>5. ¿Cuál crees que es el legado más importante de Sócrates para la sociedad actual y cómo podemos aplicarlo en nuestras vidas?</strong></p>
+        <p style="margin-left:20px;">R// Su legado es el valor del pensamiento crítico y la búsqueda constante de la verdad. Podemos aplicarlo cuestionando lo que creemos saber y actuando siempre conforme a la ética y la razón.</p>
+      </div>
+
+      <div class="contenido-en hidden">
+        <h4>Roberto Castañeda - 10th CCLL</h4>
+        <h5>Interview about Socrates:</h5>
+        <p><strong>1. How did the Socratic method influence the development of critical thinking and Western philosophy?</strong></p>
+        <p style="margin-left:20px;">A// The Socratic method encouraged dialogue and reflection, teaching people to question ideas and seek truth through reason. This approach laid the foundation for modern critical thinking.</p>
+
+        <p><strong>2. What are the main differences between Socrates’ teachings and those of the Sophists of his time?</strong></p>
+        <p style="margin-left:20px;">A// Socrates sought truth and virtue as ends in themselves, while the Sophists focused on persuasion and rhetoric, often disregarding the truth.</p>
+
+        <p><strong>3. What role did the accusation of corrupting the youth play in Socrates’ trial and sentence?</strong></p>
+        <p style="margin-left:20px;">A// It was the main reason for his condemnation. He was accused of negatively influencing youth by questioning traditional beliefs, though he actually promoted free and ethical thinking.</p>
+
+        <p><strong>4. How do you interpret Socrates’ famous phrase "I only know that I know nothing" in the context of his philosophy?</strong></p>
+        <p style="margin-left:20px;">A// It reflects intellectual humility: acknowledging ignorance is the first step toward knowledge. For Socrates, wisdom begins when one accepts not knowing everything.</p>
+
+        <p><strong>5. What do you think is Socrates’ most important legacy for today’s society, and how can we apply it in our lives?</strong></p>
+        <p style="margin-left:20px;">A// His legacy is the value of critical thinking and the constant search for truth. We can apply it by questioning what we think we know and always acting ethically and rationally.</p>
+      </div>
+      <button class="toggleIdiomaBtn">🇬🇧 Inglés</button>
+    </div>
+
+    <!-- ENTREVISTA 4: ADRIANA SALGUERO (KARL MARX con respuestas de Andrés Quiñónez) -->
+    <div class="comentario">
+      <img src="IMG/Adris.jpg" alt="Adriana" />
+      <div class="contenido-es">
+        <h4>Adriana Salguero - 10Mo CCLL</h4>
+        <h5>Entrevista sobre Karl Marx:</h5>
+
+        <p><strong>1. ¿Cuáles son las principales ideas de Karl Marx sobre la lucha de clases y cómo influyen en su visión de la historia?</strong></p>
+        <p style="margin-left:20px;">R// La lucha provoca cambios en la sociedad y hace que la historia avance.</p>
+
+        <p><strong>2. ¿Cómo define Marx el concepto de alienación en el contexto del trabajo capitalista, y cuáles son sus consecuencias para el individuo y la sociedad?</strong></p>
+        <p style="margin-left:20px;">R// El trabajador se siente separado de lo que produce, de su creatividad y de los demás. Esto genera insatisfacción, estrés y desigualdad social.</p>
+
+        <p><strong>3. ¿Cuál es la teoría del valor-trabajo de Marx, y cómo la utiliza para criticar la explotación en el sistema capitalista?</strong></p>
+        <p style="margin-left:20px;">R// Marx dice que el valor de lo que producimos viene de nuestro trabajo. Los capitalistas pagan menos al trabajador y se quedan con la diferencia, lo que genera explotación.</p>
+
+        <p><strong>4. ¿Qué papel le atribuye Marx al proletariado en la transformación de la sociedad capitalista, y cómo se lograría esta transformación según su teoría?</strong></p>
+        <p style="margin-left:20px;">R// El proletariado (trabajadores) puede cambiar la sociedad si se une y lucha por sus derechos, eliminando la propiedad privada de las fábricas y creando una sociedad más justa.</p>
+
+        <p><strong>5. ¿Cuáles son las principales críticas que se le han hecho a la teoría marxista, y cómo han evolucionado las interpretaciones de su obra a lo largo del tiempo?</strong></p>
+        <p style="margin-left:20px;">R// Se le critica por enfocarse demasiado en la economía y no considerar otros factores. Algunos intentos de aplicarla fracasaron, pero hoy hay interpretaciones modernas que adaptan sus ideas a nuevas realidades.</p>
+      </div>
+
+      <div class="contenido-en hidden">
+        <h4>Adriana Salguero - 10th CCLL</h4>
+        <h5>Interview about Karl Marx:</h5>
+
+        <p><strong>1. What are Karl Marx’s main ideas about class struggle and how do they influence his view of history?</strong></p>
+        <p style="margin-left:20px;">A// Struggle causes social change and makes history move forward.</p>
+
+        <p><strong>2. How does Marx define the concept of alienation in the context of capitalist labor, and what are its consequences for the individual and society?</strong></p>
+        <p style="margin-left:20px;">A// The worker feels separated from what he produces, from his creativity and from others. This creates dissatisfaction, stress, and social inequality.</p>
+
+        <p><strong>3. What is Marx’s labor theory of value, and how does he use it to criticize exploitation in the capitalist system?</strong></p>
+        <p style="margin-left:20px;">A// Marx states that the value of what we produce comes from our labor. Capitalists pay workers less and keep the difference, creating exploitation.</p>
+
+        <p><strong>4. What role does Marx assign to the proletariat in transforming capitalist society, and how would this transformation occur according to his theory?</strong></p>
+        <p style="margin-left:20px;">A// The proletariat can change society if it unites and fights for its rights, eliminating private ownership of factories and creating a fairer society.</p>
+
+        <p><strong>5. What are the main criticisms of Marxist theory, and how have interpretations of his work evolved over time?</strong></p>
+        <p style="margin-left:20px;">A// He is criticized for focusing too much on economics and not considering other factors. Some attempts to apply his ideas failed, but modern interpretations adapt them to new realities.</p>
+      </div>
+      <button class="toggleIdiomaBtn">🇬🇧 Inglés</button>
+    </div>
+  </section>
+
+  <script>
+// ===== MODO OSCURO =====
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+  document.body.classList.add('modo-oscuro');
+  btnModoOscuro.textContent = '☀️';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+  document.body.classList.toggle('modo-oscuro');
+  if (document.body.classList.contains('modo-oscuro')) {
+    localStorage.setItem('modoOscuro', 'activado');
+    btnModoOscuro.textContent = '☀️';
+  } else {
+    localStorage.setItem('modoOscuro', 'desactivado');
+    btnModoOscuro.textContent = '🌙';
+  }
+});
+
+// ===== CAMBIO DE IDIOMA GLOBAL =====
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+const titulo = document.querySelector('header h1');
+const navLinks = document.querySelectorAll('nav > ul > li > a');
+let idiomaEsp = true;
+
+btnIdioma.addEventListener('click', () => {
+  idiomaEsp = !idiomaEsp;
+
+  if (idiomaEsp) {
+    // Español
+    navLinks[0].textContent = 'Inicio';
+    navLinks[1].textContent = 'Reportajes';
+    navLinks[2].textContent = 'Noticias';
+    navLinks[3].textContent = 'Entrevistas';
+    navLinks[4].textContent = 'Filosofía';
+    navLinks[5].textContent = 'English';
+    navLinks[6].textContent = 'Reseñas';
+    navLinks[7].textContent = 'Opiniones';
+    titulo.textContent = 'Pensamiento Vivo';
+    btnIdioma.textContent = '🇬🇧 Inglés';
+  } else {
+    // Inglés
+    navLinks[0].textContent = 'Home';
+    navLinks[1].textContent = 'Reports';
+    navLinks[2].textContent = 'News';
+    navLinks[3].textContent = 'Interviews';
+    navLinks[4].textContent = 'Philosophy';
+    navLinks[5].textContent = 'English';
+    navLinks[6].textContent = 'Reviews';
+    navLinks[7].textContent = 'Opinions';
+    titulo.textContent = 'Living Thought';
+    btnIdioma.textContent = '🇪🇸 Español';
+  }
+});
+
+// ===== CAMBIO DE IDIOMA INDIVIDUAL POR ENTREVISTA =====
+const toggleBtns = document.querySelectorAll('.toggleIdiomaBtn');
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const comentario = btn.closest('.comentario');
+    const esDiv = comentario.querySelector('.contenido-es');
+    const enDiv = comentario.querySelector('.contenido-en');
+
+    esDiv.classList.toggle('hidden');
+    enDiv.classList.toggle('hidden');
+
+    btn.textContent = esDiv.classList.contains('hidden') ? '🇪🇸 Español' : '🇬🇧 Inglés';
+  });
+});
+
+// ===== CARRUSEL DE ENTREVISTAS =====
+const comentarios = document.querySelectorAll('.carousel .comentario');
+const leftArrow = document.querySelector('.carousel .arrow-left');
+const rightArrow = document.querySelector('.carousel .arrow-right');
+let index = 0;
+
+function mostrarComentario(i) {
+  comentarios.forEach((c, idx) => c.style.display = idx === i ? 'flex' : 'none');
+}
+
+// Mostrar el primer comentario al cargar
+mostrarComentario(index);
+
+// Flecha derecha
+rightArrow.addEventListener('click', () => {
+  index = (index + 1) % comentarios.length;
+  mostrarComentario(index);
+});
+
+// Flecha izquierda
+leftArrow.addEventListener('click', () => {
+  index = (index - 1 + comentarios.length) % comentarios.length;
+  mostrarComentario(index);
+});
+
+
+  </script>
+</body>
+</html>

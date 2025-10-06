@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Thought</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" href="img/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+   
+<header>
+   <img class="logo-circular" src="IMG/logo3.png" alt="Buggati" title="Buggati">
+
+
+    <h1>Pensamiento Vivo</h1>
+    
+    <button id="modoOscuroBtn">🌙 Modo Oscuro</button>
+    <button id="cambiarIdiomaBtn">🇬🇧 Inglés</button> 
+    <nav>  
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Reportajes.html">Reportajes</a></li>
+            <li><a href="Noticias.html">Noticias</a></li>
+            <li><a href="Entrevistas.html">Entrevistas</a></li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">Filosofía</a>
+                <div class="dropdown-content">
+                    <a href="Karl.html">Karl Marx</a>
+                    <a href="Sócrates.html">Sócrates</a>
+                    <a href="Immanuel.html">Immanuel Kant</a>
+                    <a href="Friedrich.html">Friedrich Nietzsche</a>
+                </div>
+            </li>
+            <li class="dropdown">  
+                <a href="javascript:void(0)" class="dropbtn">English</a>
+                <div class="dropdown-content">
+                    <a href="MLKJR.html">Martin Luther King Jr</a>
+                    <a href="Platón.html">Platón</a>
+                    <a href="Mary.html">Mary Wollstonecraft</a>
+                    <a href="Cesare.html">Cesare Beccaria</a>
+                </div>
+            </li>
+            <li><a href="Reseñas.html">Reseñas</a></li>
+            <li><a href="Opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+</header>
+</header>
+<section id="Platón">
+  <h2>Platón (427-347 a.C.)</h2>
+  
+  <div class="content">
+    <p>
+Platon deeply reflected on justice and the organization of the State. In his work 'The Republic', he proposed a government led by philosopher-kings, where each citizen fulfilled the role that corresponds to them according to their nature. Today, his ideas are related to ethics in politics, 
+the education of responsible leaders, and the debates on how to achieve just and balanced societies.
+
+He founded the Academy in Athens, the first formal educational institution in the West, and developed theories on justice, politics, and the organization of the State. He proposed that society should be governed by wise and virtuous leaders, 
+and promoted the education and training of citizens as a basis for a just and balanced government.
+    </p>
+
+    <img src="IMG/Platón.webp" alt="Platón" title="Platón">
+  </div>
+</section>
+
+        
+
+
+<footer>
+    <p>Integrantes/Members:<br>Mario De León y Andrés Quiñónez<br> &copy;2025</p>
+</footer>
+<script>
+// ===== MODO OSCURO =====
+const btnModoOscuro = document.getElementById('modoOscuroBtn');
+if (localStorage.getItem('modoOscuro') === 'activado') {
+  document.body.classList.add('modo-oscuro');
+  btnModoOscuro.textContent = '☀️';
+}
+
+btnModoOscuro.addEventListener('click', () => {
+  document.body.classList.toggle('modo-oscuro');
+  if (document.body.classList.contains('modo-oscuro')) {
+    localStorage.setItem('modoOscuro', 'activado');
+    btnModoOscuro.textContent = '☀️';
+  } else {
+    localStorage.setItem('modoOscuro', 'desactivado');
+    btnModoOscuro.textContent = '🌙';
+  }
+});
+
+// ===== CAMBIO DE IDIOMA =====
+const btnIdioma = document.getElementById('cambiarIdiomaBtn');
+let idiomaEspañol = true;
+
+btnIdioma.addEventListener('click', () => {
+  const titulo = document.querySelector('header h1');
+  const enlaces = document.querySelectorAll('nav a, .dropbtn');
+
+  if (idiomaEspañol) {
+    // ===== CAMBIO A INGLÉS =====
+    titulo.textContent = 'Living Thought';
+    enlaces.forEach(a => {
+      switch (a.textContent.trim()) {
+        case 'Inicio': a.textContent = 'Home'; break;
+        case 'Reportajes': a.textContent = 'Reports'; break;
+        case 'Noticias': a.textContent = 'News'; break;
+        case 'Entrevistas': a.textContent = 'Interviews'; break;
+        case 'Reseñas': a.textContent = 'Reviews'; break;
+        case 'Opiniones': a.textContent = 'Opinions'; break;
+        case 'Filosofía': a.textContent = 'Philosophy'; break;
+      }
+    });
+    btnIdioma.textContent = '🇪🇸 Español';
+  } else {
+    // ===== CAMBIO A ESPAÑOL =====
+    titulo.textContent = 'Pensamiento Vivo';
+    enlaces.forEach(a => {
+      switch (a.textContent.trim()) {
+        case 'Home': a.textContent = 'Inicio'; break;
+        case 'Reports': a.textContent = 'Reportajes'; break;
+        case 'News': a.textContent = 'Noticias'; break;
+        case 'Interviews': a.textContent = 'Entrevistas'; break;
+        case 'Reviews': a.textContent = 'Reseñas'; break;
+        case 'Opinions': a.textContent = 'Opiniones'; break;
+        case 'Philosophy': a.textContent = 'Filosofía'; break;
+      }
+    });
+    btnIdioma.textContent = '🇬🇧 Inglés';
+  }
+
+  idiomaEspañol = !idiomaEspañol;
+});
+</script>
+
+</body>
+</html>
